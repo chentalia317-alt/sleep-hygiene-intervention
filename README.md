@@ -133,3 +133,16 @@ These uncontrolled variables reflect the natural complexity of human behavior an
 - Licensed under the **MIT License**.  
 - All data are anonymized and used solely for educational and research purposes.  
 - Analyses and visualizations are fully reproducible with provided scripts.  
+
+## Section: Data Reliability and Research Transparency
+
+This project follows a transparent and reproducible research workflow.
+To ensure data integrity and validity:
+	•	All participants completed a 7-day baseline phase before intervention, providing within-subject controls.
+	•	Both subjective (KSS scale) and objective (wearable tracker) data were collected daily at fixed times.
+	•	Data cleaning steps included outlier removal, missing-value marking, and timestamp standardization.
+	•	Compliance rate was calculated for each participant to visualize data completeness.
+	•	All scripts, commits, and data revisions are logged in this repository for reproducibility.
+	•	Data are fully anonymized and used solely for educational and research purposes
+# Disclaimer:
+This project was independently designed and conducted during my high-school gap year. Some analysis scripts were developed with open-source frameworks and AI-assisted debugging. The focus is on learning and transparency rather than producing professional-level scientific output.

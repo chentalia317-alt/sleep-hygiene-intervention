@@ -15,7 +15,7 @@ if "sleep_duration_hr" in df.columns:
 else:
     result = avg_kss.copy()
 
-# 输出结果
+# 结果
 out = "data/cleaned/summary_by_participant.csv"
 result.to_csv(out, index=False, encoding="utf-8-sig")
 print(f"分析完成！结果已输出到：{out}")
