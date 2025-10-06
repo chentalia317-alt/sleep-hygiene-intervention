@@ -37,7 +37,7 @@ This study explores how simple, low-cost behavioral interventions can improve ci
 ### Intervention B — No Device Before Bed
 - **no_device:** Refrain from using any electronic devices within 30 minutes before sleep.  
 - **reduce_light:** Lower environmental light intensity (after 22:30) before bedtime.  
-- **outdoor_light:** Ensure at least 30 minutes of natural daylight exposure after getting up.  
+- **outdoor_light:** Ensure at least 30 minutes of natural daylight exposure  within one hour after getting up.  
 
 Each task was coded as 0/1 and aggregated to compute a **compliance rate** per participant per phase:  
 
