@@ -89,6 +89,15 @@ sleep-hygiene-intervention/
    - Generated boxplots of ΔKSS and ΔSleep Duration using `matplotlib`.  
    - Output files stored in `data/cleaned/`.
 
+5. **Behavioral compliance**
+To account for participant adherence to the intervention protocols, a compliance rate was computed for each participant during the 7-day intervention phase.  
+Each intervention (A: Fixed Sleep Window, B: No Device Before Bed) consisted of **three daily behavioral tasks**, and completion of each was coded as `1` (completed) or `0` (not completed).  
+The compliance rate was calculated as:
+\[
+\text{Compliance Rate} = \frac{\text{Number of tasks completed}}{\text{Total assigned tasks}}
+\]
+This measure was used to quantify behavioral engagement and interpret variability in sleepiness and sleep duration outcomes.  
+For example, **one participant in Group B did not comply with the “no-device before bed” rule on any of the seven days**, leading to a near-zero compliance rate and limited improvement in sleep outcomes.  
 
 ## Preliminary Results
 
