@@ -48,20 +48,19 @@ This rate served as a proxy for behavioral adherence and was later examined as a
 
 ## Project Structure
 sleep-hygiene-intervention/
+ ├── data/
+│  ├── raw/                         # Unprocessed source data
+│  └── cleaned/                     # Cleaned and merged datasets
+│      ├── baseline_cleaned_v7.csv
+│      ├── intervention_A_cleaned.csv
+│      ├── intervention_B_cleaned.csv
+│      ├── combined_dataset.csv
+│      ├── delta_by_participant.csv
+│      ├── delta_kss_boxplot.png
+│      ├── delta_sleep_boxplot.png
+│      └── results_summary.csv
 │
-├── data/
-│   ├── raw/                         # Unprocessed source data
-│   └── cleaned/                     # Cleaned and merged datasets
-│       ├── baseline_cleaned_v7.csv
-│       ├── intervention_A_cleaned.csv
-│       ├── intervention_B_cleaned.csv
-│       ├── combined_dataset.csv
-│       ├── delta_by_participant.csv
-│       ├── delta_kss_boxplot.png
-│       ├── delta_sleep_boxplot.png
-│       └── results_summary.csv
-│
-├── scripts/
+ ├── scripts/
 │   ├── combine_data.py              # Data merging and cleaning
 │   ├── analyze_data.py              # Descriptive statistics
 │   ├── analyze_effects.py           # t-test comparison
