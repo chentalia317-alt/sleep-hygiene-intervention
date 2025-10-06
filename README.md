@@ -115,6 +115,12 @@ We use the compliance rate to interpret between-subject variability in ΔKSS and
 
 > Although differences were not statistically significant, the trend suggested that maintaining a **fixed sleep window** might better stabilize circadian rhythms and reduce subjective sleepiness.
 
+## Limitstions and notes
+
+The data and results in this repository are intended for educational and exploratory purposes only.
+Because participants’ daily routines, environmental factors, and random life events may influence their sleep duration and subjective sleepiness (KSS) ratings, the findings should be interpreted with caution.
+These uncontrolled variables reflect the natural complexity of human behavior and highlight the need for larger-scale and more controlled studies in future research.
+
 ## Future Directions
 
 - Increase sample size to enhance statistical power.  
