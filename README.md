@@ -1,7 +1,6 @@
 # 💤 Sleep Hygiene Intervention Study: Data Analysis Repository
 **Author:** Talia Chen
 **Type:** Pilot Research(Student-led, 2025)  
-**Language:** Python / Pandas / SciPy / Matplotlib  
 
 ---
 
@@ -87,17 +86,7 @@ sleep-hygiene-intervention/
 | 2 | `02_stats_delta.py` | Compute ΔKSS / ΔSleep Duration, perform Welch *t*-test |
 | 3 | `03_plot_export.py` | Export boxplots of Δ metrics |
 
-### To Reproduce Results
-
-```bash
-pip install -r requirements.txt
-
-python scripts/01_make_combined.py
-python scripts/02_stats_delta.py
-python scripts/03_plot_export.py
-
----
-## ⚙️ Methods of Data Processing and Analysis
+## Methods of Data Processing and Analysis
 
 1. **Data Cleaning**  
    - Removed invalid or incomplete records.  
