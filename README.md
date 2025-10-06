@@ -91,14 +91,20 @@ sleep-hygiene-intervention/
 
 5. **Behavioral compliance**
 
-To account for participant adherence to the intervention protocols, a compliance rate was computed for each participant during the 7-day intervention phase.  
-Each intervention (A: Fixed Sleep Window, B: No Device Before Bed) consisted of **three daily behavioral tasks**, and completion of each was coded as `1` (completed) or `0` (not completed).  
-The compliance rate was calculated as:
-$$
-\text{Compliance rate} = \frac{\text{# tasks marked 1}}{3 \times \text{days in phase}}
-$$
-This measure was used to quantify behavioral engagement and interpret variability in sleepiness and sleep duration outcomes.  
-For example, **one participant in Group B did not comply with the “no-device before bed” rule on any of the seven days**, leading to a near-zero compliance rate and limited improvement in sleep outcomes.  
+We quantify adherence with a simple ratio:
+
+**Compliance rate = completed tasks / (tasks per day × days in phase)**
+
+- Each intervention phase lasts **7 days**, with **3 tasks per day** → denominator = **3 × 7 = 21**.
+- A task is counted as completed when it is marked `1`.
+
+**Example (Group B, one participant):**
+- `no_device`: **0/7**
+- `reduce_light`: **2/7**
+- `outdoor_light`: **5/7**  
+→ **Overall compliance = (0 + 2 + 5) / 21 = 0.33**
+
+We use the compliance rate to interpret between-subject variability in ΔKSS and ΔSleep Duration.
 
 ## Preliminary Results
 
