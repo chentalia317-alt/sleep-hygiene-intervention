@@ -146,3 +146,5 @@ To ensure data integrity and validity:
 	•	Data are fully anonymized and used solely for educational and research purposes
 # Disclaimer:
 This project was independently designed and conducted during my high-school gap year. Some analysis scripts were developed with open-source frameworks and AI-assisted debugging. The focus is on learning and transparency rather than producing professional-level scientific output.
+This repository is intended solely for educational and research demonstration purposes.
+Unauthorized modification, redistribution, or reproduction of the code or data is strictly prohibited.
