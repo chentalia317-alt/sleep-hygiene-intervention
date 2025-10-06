@@ -1,0 +1,56 @@
+import pandas as pd
+import numpy as np
+from pathlib import Path
+
+# 路径设置
+cleaned = Path("data/cleaned")
+baseline = pd.read_csv(cleaned / "baseline_cleaned_v7.csv", dtype=str)
+a = pd.read_csv(cleaned / "intervention_A_cleaned.csv", dtype=str)
+b = pd.read_csv(cleaned / "intervention_B_cleaned.csv", dtype=str)
+
+# 标签与列对齐
+baseline["group"] = baseline.get("group", np.nan)
+baseline["phase"] = "baseline"
+a["phase"] = "intervention"
+b["phase"] = "intervention"
+
+# 合并干预
+interv = pd.concat([a, b], ignore_index=True, sort=False)
+
+# 拼成总表
+df = pd.concat([baseline, interv], ignore_index=True, sort=False)
+
+# 保证KSS三列存在并为数值
+for c in ["kss_morning","kss_afternoon","kss_evening"]:
+    if c not in df.columns: df[c] = np.nan
+    df[c] = pd.to_numeric(df[c], errors="coerce")
+
+# mean_kss
+df["mean_kss"] = df[["kss_morning","kss_afternoon","kss_evening"]].mean(axis=1)
+
+# 计算睡眠时长
+def hhmm_to_min(x):
+    if pd.isna(x): return np.nan
+    try:
+        h, m = map(int, str(x).strip().split(":")[:2])
+        return h*60 + m
+    except:
+        return np.nan
+
+on = df.get("sleep_onset_time", pd.Series(np.nan, index=df.index)).apply(hhmm_to_min)
+wk = df.get("wake_time", pd.Series(np.nan, index=df.index)).apply(hhmm_to_min)
+
+dur_min = []
+for o, w in zip(on, wk):
+    if np.isnan(o) or np.isnan(w):
+        dur_min.append(np.nan)
+    else:
+        dur_min.append(w - o if w >= o else (24*60 - o) + w)
+
+df["sleep_duration_min"] = dur_min
+df["sleep_duration_hr"]  = df["sleep_duration_min"] / 60.0
+
+# 输出
+out = cleaned / "combined_dataset.csv"
+df.to_csv(out, index=False, encoding="utf-8-sig")
+print("合并完成：", out)
