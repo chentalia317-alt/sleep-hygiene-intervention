@@ -27,21 +27,6 @@ All data were self-reported through daily digital forms and analyzed using Pytho
 | **KSS (Karolinska Sleepiness Scale)** | Self-reported 1–9 (lower = more alert). |
 | **Sleep Duration (hrs)** | Self-reported nightly duration. |
 | **Compliance Rate** | Fraction of daily behavioral tasks completed (0–1 scale). |
-## 📊 Visualization of Daily Trends
-Aggregated group-level means (±1 SD) across baseline and intervention phases.
-
-**1️⃣ Daily Mean Sleepiness (KSS)**  
-![](figures/KSS_trend.png)  
-> A mild downward trend suggests possible improvement in alertness.
-
-**2️⃣ Daily Sleep Duration (hours)**  
-![](figures/SleepDuration_trend.png)  
-> Sleep duration remained stable but slightly more consistent during intervention.
-
-**3️⃣ Daily Compliance Rate (%)**  
-![](figures/Compliance_rate_trend.png)  
-> Compliance stayed above 80%, reflecting strong participant engagement and feasibility.
-
 ---
 
 ## 📊 Visualization of Daily Trends
