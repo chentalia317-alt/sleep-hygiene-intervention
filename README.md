@@ -83,7 +83,7 @@ Compliance rate represents the proportion of assigned behavioral tasks completed
 
 **Calculation:**  
 \[
-\text{Compliance rate} = \frac{\text{Number of completed tasks}}{\text{Total assigned tasks}}
+Compliance rate= Number of completed tasks\Total assigned tasks
 \]
 Each participant was expected to submit daily records during both the 5-day baseline and 7-day intervention phases.
 
