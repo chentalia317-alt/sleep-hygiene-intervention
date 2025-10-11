@@ -1,7 +1,7 @@
 # 💤 Sleep Hygiene Intervention Study: Data Analysis Repository
 **Author:** Talia Chen
 **Type:** Pilot Research(Student-led, 2025)  
-**Version:**1.0-October 2025
+**Version:** 1.0-October 2025
 
 ---
 
