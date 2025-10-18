@@ -40,8 +40,8 @@ base_ids = set(df.loc[df["phase"]=="baseline","participant_id"].dropna().unique(
 intv_ids = set(df.loc[df["phase"]=="intervention","participant_id"].dropna().unique())
 print("Baseline n IDs:", len(base_ids), "Intervention n IDs:", len(intv_ids), "Intersection:", len(base_ids & intv_ids))
 
-# ========= 关键修复：baseline 聚合不带 group，之后再从干预期补回 group =========
-# 1) 不带 group 的聚合（防止 baseline 因 NaN group 被丢）
+# ========= 关键修复：baseline 聚合不带 group，之后再从干预期补 group =========
+# 1) 不带 group 的聚合
 agg = (df.groupby(["participant_id","phase"])
          .agg(kss_mean=("kss_mean","mean"),
               sleep_mean=("sleep_duration_min","mean"))
@@ -50,12 +50,12 @@ agg = (df.groupby(["participant_id","phase"])
 base = agg[agg["phase"]=="baseline"].copy()
 intv = agg[agg["phase"]=="intervention"].copy()
 
-# 2) 从干预期取 participant_id → group(A/B) 映射
+# 2) 从干预期取 participant_id 到 group(A/B) 映射
 group_map = (df.loc[df["phase"]=="intervention", ["participant_id","group"]]
                .dropna()
                .drop_duplicates())
 
-# 3) 合并 baseline 与 intervention，再补回 group
+# 3) 合并 baseline 与 intervention，再补 group
 merged = base.merge(
     intv[["participant_id","kss_mean","sleep_mean"]],
     on="participant_id",
@@ -93,7 +93,7 @@ out_csv = "data/cleaned/delta_by_participant.csv"
 merged.to_csv(out_csv, index=False, encoding="utf-8-sig")
 print("saved:", out_csv)
 
-# ===== 画图（英文标签避免中文字体告警）=====
+# ===== 画图 =====
 plt.figure(figsize=(6,5))
 plt.boxplot([a_k, b_k], labels=["A: Fixed window","B: No device"])
 plt.title("ΔKSS (Intervention - Baseline)")
