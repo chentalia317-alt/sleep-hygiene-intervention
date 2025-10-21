@@ -1,0 +1,42 @@
+name: Update GitHub Traffic
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'   # 每周一 10:00 北京时间（02:00 UTC）
+  workflow_dispatch:       # 允许我自己手动操作触发
+
+permissions:
+  contents: write
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r analytics/requirements.txt
+
+      - name: Run tracker
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TRAFFIC_TOKEN }}
+        run: |
+          python analytics/github_traffic_tracker.py \
+            --owner chentailia317-alt \
+            --repo sleep-hygiene-intervention \
+            --outdir analytics/traffic_out \
+            --label "Sleep Hygiene Intervention"
+
+      - name: Commit results
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(analytics): refresh traffic charts"
+          file_pattern: analytics/traffic_out/*
