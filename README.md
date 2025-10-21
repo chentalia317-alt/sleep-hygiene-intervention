@@ -162,6 +162,20 @@ The focus is on **learning and research transparency**, rather than producing pr
 
 > This repository is intended solely for **educational and research demonstration purposes**.  
 > Unauthorized modification, redistribution, or reproduction of the code or data is strictly prohibited.
+---
+
+## Acknowledgment
+
+This project carries the same spirit that guided me on the mountain: patience, connection, and shared resilience.  
+During a snow-covered ascent where my headlamp broke and my ice cleats failed, I learned that progress doesn’t always come from strength, but from presence, from the quiet encouragement of strangers who said, “慢慢走，完全来得及.”  
+
+To everyone who offered warmth, guidance, and kindness — both on the mountain and within this research community — thank you.  
+You reminded me that science, like climbing, is not a solitary pursuit of control but a collective journey of understanding.  
+
+We believe that good research, like a good climb, happens slowly and attentively.  
+It means listening to data, to people, and to the living rhythm behind every result.  
+
+扎西德勒。
 
 ---
 
