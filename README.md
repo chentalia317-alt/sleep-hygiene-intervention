@@ -121,18 +121,12 @@ Even though group-level changes in KSS and sleep duration were not statistically
 ## ⚖️ Limitations & Future Directions
 - Small sample size limits statistical power.  
 - Self-reported sleep metrics may contain bias.  
-- Future work will include objective data (e.g., actigraphy, HRV) and longer monitoring.  
-- Compliance rate will be modeled as a covariate in regression analyses.
-
----
-
-## Future Directions
-
 - Increase sample size to enhance statistical power.  
 - Integrate objective physiological data (e.g., HRV, actigraphy).  
 - Incorporate **compliance rate** as a covariate in regression modeling.  
 - Extend study duration to observe long-term circadian stabilization.  
-
+- Compliance rate will be modeled as a covariate in regression analyses.
+  
 ---
 
 ## Data Reliability and Research Transparency
