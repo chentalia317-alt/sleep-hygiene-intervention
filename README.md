@@ -138,10 +138,7 @@ This project follows a transparent and reproducible research workflow to ensure 
 - Data cleaning steps included outlier removal, missing-value marking, and timestamp standardization.  
 - Compliance rate was calculated for each participant to assess data completeness.  
 - All scripts, commits, and data revisions are logged in this repository for reproducibility.  
-- All data are fully anonymized and used solely for educational and research purposes.  
-
----
-
+- All data are fully anonymized and used solely for educational and research purposes. 
 - Licensed under the **MIT License**.  
 - All analyses and visualizations are **fully reproducible** with provided scripts.  
 - All participants provided informed consent, and no identifiable information is included in the dataset.  
