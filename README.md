@@ -155,6 +155,15 @@ The focus is on **learning and research transparency**, rather than producing pr
 > Unauthorized modification, redistribution, or reproduction of the code or data is strictly prohibited.
 ---
 
+## Sleep Intervention Study – Post-analysis Reflection (Nov 2025)
+
+### Key Update
+- **Data cleaning & transparency:** Uploaded cleaned CSV files and updated metadata following OSF format.  
+- **Statistical re-evaluation:** Recalculated descriptive statistics using Pandas (v2.2.3); no new participants were added.  
+- **Interpretation refinement:** Identified that variance in KSS scores might relate to untracked confounders (stress, light exposure).  
+
+---
+
 ## Acknowledgment
 
 This project carries the same spirit that guided me on the mountain: patience, connection, and shared resilience.  
