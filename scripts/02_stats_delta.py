@@ -1,4 +1,3 @@
-# 读取 combined_dataset.csv - 计算每人 Δ=干预-基线 - A/B 组做 Welch t-test
 import argparse
 from pathlib import Path
 import pandas as pd
@@ -10,7 +9,6 @@ def compute_summary(df: pd.DataFrame, metric: str) -> dict | None:
     base = df[df["phase"]=="baseline"].groupby("participant_id")[metric].mean()
     inter = df[df["phase"]=="intervention"].groupby("participant_id")[metric].mean()
     delta = (inter - base).dropna().to_frame("delta")
-    # 干预期的组别众数作为参与者分组
     groups = (df[df["phase"]=="intervention"]
               .groupby("participant_id")["group"]
               .agg(lambda s: s.mode().iat[0] if not s.mode().empty else None))
@@ -28,7 +26,6 @@ def compute_summary(df: pd.DataFrame, metric: str) -> dict | None:
 
 def main(infile: str, outfile: str):
     df = pd.read_csv(infile)
-    # 统一列名（如果有）
     if "sleep_duration_hr" in df.columns and "sleep_duration_h" not in df.columns:
         df = df.rename(columns={"sleep_duration_hr": "sleep_duration_h"})
     rows = []
