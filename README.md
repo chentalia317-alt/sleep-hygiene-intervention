@@ -94,8 +94,6 @@ Each participant was expected to submit daily records during both the 5-day base
 - Compliance remained consistently high throughout the 12-day protocol.  
 - A mild increase was observed during the intervention phase, suggesting participants became more engaged after adopting fixed behavioral routines.
 
-![](figures/Compliance_rate_trend.png)
-
 ---
 
 **Interpretation:**  
